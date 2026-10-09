@@ -42,7 +42,6 @@
             position: relative;
         }
 
-        /* Hero Header */
         .hero-card {
             background: var(--card-bg);
             backdrop-filter: blur(20px);
@@ -57,15 +56,6 @@
             position: relative;
             overflow: hidden;
         }
-        .hero-card::before {
-            content: '';
-            position: absolute;
-            top: -50%; left: -50%; width: 200%; height: 200%;
-            background: radial-gradient(circle, rgba(56,189,248,0.1) 0%, transparent 70%);
-            z-index: 0;
-            pointer-events: none;
-        }
-        .hero-card > * { position: relative; z-index: 1; }
 
         .badge {
             display: inline-block;
@@ -100,7 +90,6 @@
             margin-right: auto;
         }
 
-        /* Stats Bar */
         .stats-bar {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -165,7 +154,6 @@
             background: linear-gradient(90deg, rgba(56,189,248,0.5), transparent);
         }
 
-        /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
@@ -183,7 +171,6 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform-style: preserve-3d;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -230,11 +217,9 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: gap 0.2s ease;
         }
-        .project-link:hover { gap: 10px; text-decoration: underline; }
+        .project-link:hover { text-decoration: underline; }
 
-        /* Info Grid */
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -321,8 +306,83 @@
         <h2>Featured Creations & Experience</h2>
         <div class="projects-grid">
             
-            <!-- Project 1 -->
+            <!-- Project 1: Retail Sales -->
             <div class="project-card">
                 <div>
                     <h3>Retail Sales & Customer Segmentation Analytics</h3>
-                    <p>End-to-end business intelligence pipeline analyzing 500k+ transactions. Built interactive Power BI executive dashboards
+                    <p>End-to-end business intelligence pipeline analyzing 500k+ transactions. Built interactive Power BI executive dashboards, wrote advanced SQL queries (CTEs, window functions), and performed RFM customer segmentation using Python & Pandas.</p>
+                    <div class="tags-container">
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">DAX</span>
+                    </div>
+                </div>
+                <a href="https://github.com/krishnaveninagraj" target="_blank" class="project-link">View Repository &rarr;</a>
+            </div>
+
+            <!-- Project 2: Personal Gemini Journal -->
+            <div class="project-card">
+                <div>
+                    <h3>Personal Gemini Journal</h3>
+                    <p>An immersive web application developed for an ideathon challenge, integrating user authentication, multi-turn AI interactions, and isolated cloud data storage for a seamless journaling experience.</p>
+                    <div class="tags-container">
+                        <span class="tech-tag">Gemini API</span>
+                        <span class="tech-tag">Cloud Storage</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Authentication</span>
+                    </div>
+                </div>
+                <a href="https://github.com/krishnaveninagraj" target="_blank" class="project-link">View Repository &rarr;</a>
+            </div>
+
+            <!-- Project 3: QuestBound Chronicles -->
+            <div class="project-card">
+                <div>
+                    <h3>QuestBound Chronicles</h3>
+                    <p>An interactive Android mobile application built with Kotlin, incorporating Gemini API integration, Dagger/Hilt dependency injection, and dynamic, context-aware avatar pop-ups based on real-time AI topic classification.</p>
+                    <div class="tags-container">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Android Studio</span>
+                        <span class="tech-tag">Gemini API</span>
+                        <span class="tech-tag">Dagger/Hilt</span>
+                    </div>
+                </div>
+                <a href="https://github.com/krishnaveninagraj" target="_blank" class="project-link">View Repository &rarr;</a>
+            </div>
+
+            <!-- Project 4: GSoC OCR -->
+            <div class="project-card">
+                <div>
+                    <h3>Google Summer of Code (GSoC) - OCR Test Project</h3>
+                    <p>Developed an advanced OCR testing and implementation framework as part of the GSoC initiative, focusing on extracting, processing, and evaluating textual data accurately to improve document processing pipelines.</p>
+                    <div class="tags-container">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OCR</span>
+                        <span class="tech-tag">Open Source</span>
+                        <span class="tech-tag">Git</span>
+                    </div>
+                </div>
+                <a href="https://github.com/krishnaveninagraj/Renaissance-GSoC-OCR-Test.git" target="_blank" class="project-link">View Repository &rarr;</a>
+            </div>
+
+            <!-- Project 5: Ecoverify -->
+            <div class="project-card">
+                <div>
+                    <h3>Ecoverify - Prompt to Prototype</h3>
+                    <p>Built and submitted an innovative prototype for the Google Startups "Prompt to Prototype" challenge, optimizing prompt workflows and integrating rapid AI prototyping methods to deliver a functional, scalable solution.</p>
+                    <div class="tags-container">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Google AI Studio</span>
+                        <span class="tech-tag">Prompt Engineering</span>
+                    </div>
+                </div>
+                <a href="https://github.com/krishnaveninagraj/Ecoverify.git" target="_blank" class="project-link">View Repository &rarr;</a>
+            </div>
+
+            <!-- Project 6: Chrome Dino RL -->
+            <div class="project-card">
+                <div>
+                    <h3>Chrome Dino RL Agent</h3>
+                    <p>Designed and trained an autonomous Reinforcement Learning agent to play and master the Chrome Dino game, gaining deep practical
